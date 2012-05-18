@@ -15,6 +15,7 @@ without having to depend on a specific one.
 * [kramdown](http://kramdown.rubyforge.org/)
 * [rdiscount](https://github.com/rtomayko/rdiscount#readme)
 * [redcarpet](https://github.com/tanoku/redcarpet#readme)
+* [rpeg_markdown](https://github.com/rtomayko/rpeg-markdown#readme)
 
 ## Examples
 

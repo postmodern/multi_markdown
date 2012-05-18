@@ -1,23 +1,26 @@
 module MultiMarkdown
   # Markdown library names
   LIBRARIES = {
-    :kramdown  => 'kramdown',
-    :rdiscount => 'rdiscount',
-    :redcarpet => 'redcarpet',
+    :kramdown      => 'kramdown',
+    :rdiscount     => 'rdiscount',
+    :redcarpet     => 'redcarpet',
+    :rpeg_markdown => 'peg_markdown'
   }
 
   # Markdown Constants
   CONSTANTS = {
-    :kramdown  => 'Kramdown::Document',
-    :rdiscount => 'RDiscount',
-    :redcarpet => 'RedcarpetCompat'
+    :kramdown      => 'Kramdown::Document',
+    :rdiscount     => 'RDiscount',
+    :redcarpet     => 'RedcarpetCompat',
+    :rpeg_markdown => 'PEGMarkdown'
   }
 
   # The loading priority
   PRIORITY = [
     :kramdown,
     :rdiscount,
-    :redcarpet
+    :redcarpet,
+    :rpeg_markdown
   ]
 
   @@markdown = nil
