@@ -1,40 +1,34 @@
 # encoding: utf-8
 
 require 'rubygems'
-require 'rake'
 
 begin
-  gem 'rubygems-tasks', '~> 0.2'
-  require 'rubygems/tasks'
-
-  Gem::Tasks.new
+  require 'bundler'
 rescue LoadError => e
   warn e.message
-  warn "Run `gem install rubygems-tasks` to install 'rubygems/tasks'."
+  warn "Run `gem install bundler` to install Bundler."
+  exit e.status_code
 end
 
 begin
-  gem 'rspec', '~> 2.4'
-  require 'rspec/core/rake_task'
-
-  RSpec::Core::RakeTask.new
-rescue LoadError => e
-  task :spec do
-    abort "Please run `gem install rspec` to install RSpec."
-  end
+  Bundler.setup(:development)
+rescue Bundler::BundlerError => e
+  warn e.message
+  warn "Run `bundle install` to install missing gems."
+  exit e.status_code
 end
+
+require 'rake'
+
+require 'rubygems/tasks'
+Gem::Tasks.new
+
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new
 
 task :test => :spec
 task :default => :spec
 
-begin
-  gem 'yard', '~> 0.7'
-  require 'yard'
-
-  YARD::Rake::YardocTask.new  
-rescue LoadError => e
-  task :yard do
-    abort "Please run `gem install yard` to install YARD."
-  end
-end
+require 'yard'
+YARD::Rake::YardocTask.new  
 task :doc => :yard

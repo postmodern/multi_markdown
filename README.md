@@ -7,15 +7,18 @@
 
 ## Description
 
-TODO: Description
+multi_markdown allows projects to use a wide variety of Markdown Processors,
+without having to depend on a specific one.
 
-## Features
+## Supported
+
+* [kramdown](http://kramdown.rubyforge.org/)
+* [rdiscount](https://github.com/rtomayko/rdiscount#readme)
+* [redcarpet](https://github.com/tanoku/redcarpet#readme)
 
 ## Examples
 
     require 'multi_markdown'
-
-## Requirements
 
 ## Install
 
@@ -23,6 +26,6 @@ TODO: Description
 
 ## Copyright
 
-Copyright (c) 2012 Postmodern
+Copyright (c) 2012 Hal Brodigan
 
 See {file:LICENSE.txt} for details.
