@@ -1,0 +1,12 @@
+name: multi_markdown
+summary: "TODO: Summary"
+description: "TODO: Description"
+license: MIT
+authors: Postmodern
+email: postmodern.mod3@gmail.com
+homepage: https://github.com/postmodern/multi_markdown#readme
+
+development_dependencies:
+  rubygems-tasks: ~> 0.2
+  rspec: ~> 2.4
+  yard: ~> 0.7
