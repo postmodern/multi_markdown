@@ -37,6 +37,8 @@ module MultiMarkdown
   # @raise [NameError]
   #   The constant for the Markdown library could not be found.
   #
+  # @api semipublic
+  #
   def self.find(library)
     unless CONSTANTS.has_key?(library)
       raise(ArgumentError,"unknown Markdown library: #{library}")
@@ -63,6 +65,8 @@ module MultiMarkdown
   # @raise [NameError]
   #   The constant for the Markdown library could not be found.
   #
+  # @api semipublic
+  #
   def self.use(library)
     unless LIBRARIES.has_key?(library)
       raise(ArgumentError,"unknown Markdown library: #{library}")
@@ -81,6 +85,8 @@ module MultiMarkdown
   #
   # @raise [LoadError]
   #   None of the supported Markdown libraries could be found or loaded.
+  #
+  # @api semipublic
   #
   def self.load
     # attempt to find an already loaded markdown library
@@ -115,6 +121,8 @@ module MultiMarkdown
   #
   # @return [#to_html]
   #   The Markdown document.
+  #
+  # @api public
   #
   def self.new(text,options={})
     load unless @@markdown
