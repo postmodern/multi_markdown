@@ -1,34 +1,55 @@
 # encoding: utf-8
 
 require 'rubygems'
-
-begin
-  require 'bundler'
-rescue LoadError => e
-  warn e.message
-  warn "Run `gem install bundler` to install Bundler."
-  exit e.status_code
-end
-
-begin
-  Bundler.setup(:development)
-rescue Bundler::BundlerError => e
-  warn e.message
-  warn "Run `bundle install` to install missing gems."
-  exit e.status_code
-end
-
 require 'rake'
 
-require 'rubygems/tasks'
-Gem::Tasks.new
+begin
+  gem 'rubygems-tasks', '~> 0.2'
+  require 'rubygems/tasks'
 
-require 'rspec/core/rake_task'
-RSpec::Core::RakeTask.new
+  Gem::Tasks.new
+rescue LoadError => e
+  warn e.message
+  warn "Run `gem install rubygems-tasks` to install 'rubygems/tasks'."
+end
+
+begin
+  gem 'rspec', '~> 2.4'
+  require 'rspec/core/rake_task'
+
+  RSpec::Core::RakeTask.new('spec:multi_markdown') do |spec|
+    spec.pattern = 'spec/multi_markdown_spec.rb'
+  end
+  task :spec => 'spec:multi_markdown'
+
+  Dir.glob('spec/libraries/*_spec.rb') do |path|
+    name = File.basename(path).chomp('_spec.rb')
+
+    namespace :spec do
+      RSpec::Core::RakeTask.new(name) do |spec|
+        spec.pattern = path
+      end
+    end
+
+    task :spec => "spec:#{name}"
+  end
+rescue LoadError => e
+  task :spec do
+    abort "Please run `gem install rspec` to install RSpec."
+  end
+end
 
 task :test => :spec
 task :default => :spec
 
-require 'yard'
-YARD::Rake::YardocTask.new  
+begin
+  gem 'yard', '~> 0.7'
+  require 'yard'
+
+  YARD::Rake::YardocTask.new  
+rescue LoadError => e
+  task :yard do
+    abort "Please run `gem install yard` to install YARD."
+  end
+end
 task :doc => :yard

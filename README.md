@@ -20,6 +20,9 @@ without having to depend on a specific one.
 
     require 'multi_markdown'
 
+    MultiMarkdown.new('hello _world_').to_html
+    # => "<p>hello <em>world</em></p>\n"
+
 ## Install
 
     $ gem install multi_markdown
