@@ -12,4 +12,5 @@ homepage: https://github.com/postmodern/multi_markdown#readme
 development_dependencies:
   rubygems-tasks: ~> 0.2
   rspec: ~> 2.4
+  bundler: ~> 1.0
   yard: ~> 0.7
