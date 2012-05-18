@@ -7,7 +7,7 @@
 
 ## Description
 
-multi_markdown allows projects to use a wide variety of Markdown Processors,
+multi_markdown allows projects to use a wide variety of Markdown libraries,
 without having to depend on a specific one.
 
 ## Supported

@@ -1,7 +1,7 @@
 name: multi_markdown
-summary: Allows switching between multiple Markdown Processors.
+summary: Allows switching between multiple Markdown libraries.
 description:
-  multi_markdown allows projects to use a wide variety of Markdown Processors,
+  multi_markdown allows projects to use a wide variety of Markdown libraries,
   without having to depend on a specific one.
 
 license: MIT
