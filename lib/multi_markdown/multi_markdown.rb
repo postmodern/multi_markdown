@@ -17,9 +17,9 @@ module MultiMarkdown
 
   # The loading priority
   PRIORITY = [
-    :kramdown,
-    :rdiscount,
     :redcarpet,
+    :rdiscount,
+    :kramdown,
     :rpeg_markdown
   ]
 
