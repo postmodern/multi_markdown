@@ -35,10 +35,10 @@ describe MultiMarkdown do
   end
 
   describe "load" do
-    before { Bundler.setup(:redcarpet, :rdiscount) }
+    before { Bundler.setup(:rdiscount, :kramdown, :redcarpet) }
 
     it "should load the first available library" do
-      subject.load.name.should == 'RDiscount'
+      subject.load.name.should == subject::CONSTANTS[:redcarpet]
     end
   end
 end
