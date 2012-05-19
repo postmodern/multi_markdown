@@ -3,6 +3,7 @@
 * Added support for:
   * [BlueCloth][bluecloth]
   * [Maruku][maruku]
+* Use the same loading priority as [YARD](https://github.com/lsegal/yard/blob/master/lib/yard/templates/helpers/markup_helper.rb#L24-31)
 
 ### 0.1.0 / 2012-05-18
 
