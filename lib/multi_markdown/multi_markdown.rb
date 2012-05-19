@@ -50,7 +50,7 @@ module MultiMarkdown
       raise(ArgumentError,"unknown Markdown library: #{library}")
     end
 
-    eval(CONSTANTS[library])
+    eval('::' + CONSTANTS[library])
   end
 
   #
