@@ -3,6 +3,7 @@ module MultiMarkdown
   LIBRARIES = {
     :bluecloth     => 'bluecloth',
     :kramdown      => 'kramdown',
+    :maruku        => 'maruku',
     :rdiscount     => 'rdiscount',
     :redcarpet     => 'redcarpet',
     :rpeg_markdown => 'peg_markdown'
@@ -12,6 +13,7 @@ module MultiMarkdown
   CONSTANTS = {
     :bluecloth     => 'BlueCloth',
     :kramdown      => 'Kramdown::Document',
+    :maruku        => 'Maruku',
     :rdiscount     => 'RDiscount',
     :redcarpet     => 'RedcarpetCompat',
     :rpeg_markdown => 'PEGMarkdown'
@@ -23,6 +25,7 @@ module MultiMarkdown
     :rdiscount,
     :kramdown,
     :bluecloth,
+    :maruku,
     :rpeg_markdown
   ]
 
