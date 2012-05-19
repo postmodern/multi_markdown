@@ -12,6 +12,7 @@ without having to depend on a specific one.
 
 ## Supported
 
+* [bluecloth](http://deveiate.org/projects/BlueCloth)
 * [kramdown](http://kramdown.rubyforge.org/)
 * [rdiscount](https://github.com/rtomayko/rdiscount#readme)
 * [redcarpet](https://github.com/tanoku/redcarpet#readme)

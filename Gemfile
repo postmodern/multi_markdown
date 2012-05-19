@@ -4,6 +4,7 @@ gemspec
 
 gem 'rspec', '~> 2.4'
 
+gem 'bluecloth',     :require => nil, :group => [:bluecloth]
 gem 'kramdown',      :require => nil, :group => [:kramdown]
 gem 'rdiscount',     :require => nil, :group => [:rdiscount]
 gem 'redcarpet',     :require => nil, :group => [:redcarpet]
