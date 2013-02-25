@@ -7,7 +7,7 @@ rescue LoadError => e
 end
 
 begin
-  Bundler.setup(:default)
+  Bundler.setup(:test)
 rescue Bundler::BundlerError => e
   warn e.message
   warn "Run `bundle install` to install missing gems"
