@@ -31,6 +31,6 @@ A common interface to multiple Ruby Markdown libraries.
 
 ## Copyright
 
-Copyright (c) 2012 Hal Brodigan
+Copyright (c) 2012-2013 Hal Brodigan
 
 See {file:LICENSE.txt} for details.
