@@ -7,7 +7,8 @@
 
 ## Description
 
-A common interface to multiple Ruby Markdown libraries.
+A common interface to multiple Ruby Markdown libraries. Not to be confused with
+the [MultiMarkdown](http://fletcherpenney.net/multimarkdown/) format/tool.
 
 ## Supported
 
