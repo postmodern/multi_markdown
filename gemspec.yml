@@ -1,9 +1,9 @@
 name: multi_markdown
-summary: Allows switching between multiple Markdown libraries.
+summary: A common interface to multiple Markdown libraries.
 description:
-  multi_markdown allows projects to use a wide variety of Markdown libraries,
-  without having to depend on a specific one.
-
+  A common interface to multiple Markdown libraries. Supports bluecloth,
+  kramdown, maruku, rdiscount, redcarpet and rpeg_markdown.
+  
 license: MIT
 authors: Postmodern
 email: postmodern.mod3@gmail.com
