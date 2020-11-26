@@ -11,13 +11,13 @@ describe MultiMarkdown do
       before { require 'bluecloth' }
 
       it "should find the BlueCloth" do
-        subject.find(library).name.should == constant
+        expect(subject.find(library).name).to be == constant
       end
     end
 
     describe "use" do
       it "should load and find BlueCloth" do
-        subject.use(library).name.should == constant
+        expect(subject.use(library).name).to be == constant
       end
     end
   end

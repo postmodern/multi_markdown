@@ -11,13 +11,13 @@ describe MultiMarkdown do
       before { require 'peg_markdown' }
 
       it "should find the PEGMarkdown" do
-        subject.find(library).name.should == constant
+        expect(subject.find(library).name).to be == constant
       end
     end
 
     describe "use" do
       it "should load and find PEGMarkdown" do
-        subject.use(library).name.should == constant
+        expect(subject.use(library).name).to be == constant
       end
     end
   end
