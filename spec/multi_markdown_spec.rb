@@ -2,10 +2,6 @@ require 'spec_helper'
 require 'multi_markdown'
 
 describe MultiMarkdown do
-  before(:all) do
-    $LOAD_PATH.reject! { |path| path =~ /kramdown/ }
-  end
-
   it "should have a VERSION constant" do
     expect(subject.const_get('VERSION')).to_not be_empty
   end
@@ -20,11 +16,9 @@ describe MultiMarkdown do
     end
 
     context "when the library constant cannot be found" do
-      before { Bundler.setup(:kramdown) }
-
       it do
         expect {
-          subject.find(:maruku)
+          subject.find(:redcarpet)
         }.to raise_error(NameError)
       end
     end
@@ -42,19 +36,15 @@ describe MultiMarkdown do
     context "when the library cannot be required" do
       it do
         expect {
-          subject.use(:kramdown)
+          subject.use(:redcarpet)
         }.to raise_error(LoadError)
       end
     end
   end
 
   describe "load" do
-    before(:all) do
-      $LOAD_PATH.reject! { |path| path =~ /redcarpet/ }
-    end
-
     it "should load the first available library" do
-      expect(subject.load.name).to be == subject::CONSTANTS[:rdiscount]
+      expect(subject.load.name).to be == subject::CONSTANTS[:kramdown]
     end
   end
 end

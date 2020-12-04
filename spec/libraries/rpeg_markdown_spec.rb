@@ -5,8 +5,6 @@ describe MultiMarkdown do
     let(:library)  { :rpeg_markdown }
     let(:constant) { 'PEGMarkdown'  }
 
-    before { Bundler.setup(library) }
-
     describe "find" do
       before { require 'peg_markdown' }
 

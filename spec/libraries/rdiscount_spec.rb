@@ -5,8 +5,6 @@ describe MultiMarkdown do
     let(:library)  { :rdiscount  }
     let(:constant) { 'RDiscount' }
 
-    before { Bundler.setup(library) }
-
     describe "find" do
       before { require 'rdiscount' }
 

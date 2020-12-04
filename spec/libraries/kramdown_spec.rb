@@ -5,8 +5,6 @@ describe MultiMarkdown do
     let(:library)  { :kramdown            }
     let(:constant) { 'Kramdown::Document' }
 
-    before { Bundler.setup(library) }
-
     describe "find" do
       before { require 'kramdown' }
 

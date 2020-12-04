@@ -5,8 +5,6 @@ describe MultiMarkdown do
     let(:library)  { :bluecloth  }
     let(:constant) { 'BlueCloth' }
 
-    before { Bundler.setup(library) }
-
     describe "find" do
       before { require 'bluecloth' }
 

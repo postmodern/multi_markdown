@@ -5,8 +5,6 @@ describe MultiMarkdown do
     let(:library)  { :redcarpet        }
     let(:constant) { 'RedcarpetCompat' }
 
-    before { Bundler.setup(library) }
-
     describe "find" do
       before { require 'redcarpet' }
 
