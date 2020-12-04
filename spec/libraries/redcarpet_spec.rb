@@ -9,13 +9,13 @@ describe MultiMarkdown do
       before { require 'redcarpet' }
 
       it "should find the RedcarpetCompat" do
-        subject.find(library).name.should == constant
+        expect(subject.find(library).name).to be == constant
       end
     end
 
     describe "use" do
       it "should load and find RedcarpetCompat" do
-        subject.use(library).name.should == constant
+        expect(subject.use(library).name).to be == constant
       end
     end
   end
